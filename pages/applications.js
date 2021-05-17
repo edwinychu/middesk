@@ -41,7 +41,6 @@ export default function Applications() {
 
     if (res.status === 200) {
       setBusinessData(res.data);
-      console.log('bus data is', res.data)
     } else {
 
     }

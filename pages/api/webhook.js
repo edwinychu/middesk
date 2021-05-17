@@ -22,11 +22,8 @@ const webhook = async(req, res) => {
   if (webhook_type === 'business.updated') {
     // If a business is updated, fetch the new data from the webhook to utilize it
     const new_business_data = webhook_body.data;
+    
     const query = { id: business_id };
-
-    console.log('id is', business_id);
-    console.log('data is', new_business_data);
-
     const update = { data: new_business_data };
 
     // We're choosing to save the new data from the webhook in our mongo collection
