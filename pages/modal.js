@@ -1,5 +1,4 @@
 import React from "react";
-import ReactJson from 'react-json-view'
 
 export default function Modal({ closeBusiness, businessData }) {
   return (
