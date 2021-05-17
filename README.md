@@ -10,11 +10,18 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Resources Used
+Make sure you run [Ngrok](https://ngrok.com/) to be able to open up your local webhook endpoint to outside https requests.
 
+To see this applicatoin live, visit https://middesk.vercel.app/.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Resources Used
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The following resources and frameworks were used to build this application. Check them out!
+
+1. [Next.JS](https://nextjs.org/)
+2. [Tailwind CSS](https://tailwindcss.com/docs/guides/nextjs)
+4. [MongoDB](https://www.mongodb.com/1)
+5. [Ngrok](https://ngrok.com/)
+
 
 
