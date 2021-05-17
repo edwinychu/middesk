@@ -2,7 +2,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Vaud;
+  font-family: FoundersGrotesk;
+  background-image: url('../public/middesk_bg.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 a {

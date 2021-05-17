@@ -15,26 +15,30 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          <a href="https://middesk.com">Middesk</a> Example Implementation
+          <strong><a href="https://middesk.com">Middesk</a></strong> Example Implementation
         </h1>
 
-        {/* <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p> */}
+        <p class="mt-4 text-2xl max-w-3xl text-center">
+          Welcome! This is a simple application that covers the following concepts of the Middesk API:
+        </p>
+        
+        <ol class="mt-4 text-xl text-gray-500">
+          <li>1. Creating and Retrieving a <a href="https://docs.middesk.com/reference#businesses"><u>Middesk Business(es)</u></a></li>
+          <li>2. Setting up and utilizing your <a href="https://docs.middesk.com/reference#webhooks"><u>Webhook endpoint</u></a></li>
+        </ol>
 
         <div className={styles.grid}>
           <Link href="/form">
             <a className={styles.card}>
               <h2>Start Application &rarr;</h2>
-              <p>Start your business bank account application process</p>
+              <p>Capture business information and create a Middesk Business</p>
             </a>
           </Link>
           
           <Link href="/applications">
             <a className={styles.card}>
               <h2>Application Status &rarr;</h2>
-              <p>Check the statuses of your business bank account applications</p>
+              <p>Check the latest data and statuses of your Middesk businesses</p>
             </a>
           </Link>
 

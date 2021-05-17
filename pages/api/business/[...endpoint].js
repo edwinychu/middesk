@@ -72,7 +72,16 @@ const business = async(req, res) => {
   }
 
   if (request === 'retrieve') {
+    const { id } = req.body;
+    // Retrieve a specific Middesk Business
+    const base_response = 
+      await baseRequest('retrieve_business', { id });
+    console.log('base_response is', base_response)
+    if (base_response.error) {
+      res.status(400).json(base_response);
+    }
     
+    res.status(200).json(base_response.data);
   }
 
   if (request === 'retrieve_all') {

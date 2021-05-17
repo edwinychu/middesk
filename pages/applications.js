@@ -5,11 +5,14 @@ import { useEffect, useState } from 'react';
 
 import styles from '../styles/Home.module.css';
 
+import Modal from './modal.js';
 import Navbar from './navbar.js';
 
 export default function Applications() {
   let [businesses, setBusinesses] = useState([]);
+  let [businessData, setBusinessData] = useState({});
   let [businessCount, setBusinessCount] = useState(0);
+  let [showModal, setShowModal] = useState(false);
 
   useEffect(async () => {
     const res = await axios({
@@ -28,9 +31,25 @@ export default function Applications() {
 
   }, []);
 
-  // expandBusiness(async () => {
+  async function expandBusiness(id) {
+    setShowModal(true);
+    const res = await axios({
+      url: '/api/business/retrieve',
+      method: 'post',
+      data: { id }
+    });
 
-  // });
+    if (res.status === 200) {
+      setBusinessData(res.data);
+      console.log('bus data is', res.data)
+    } else {
+
+    }
+  };
+
+  async function closeBusiness() {
+    setShowModal(false);
+  }
 
   return (
     <div className={styles.containerpages}>
@@ -75,8 +94,11 @@ export default function Applications() {
                     >
                       Status
                     </th>
-                    <th scope="col" className="relative px-6 py-3">
-                      <span className="sr-only">Edit</span>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Expand Data
                     </th>
                   </tr>
                 </thead>
@@ -108,9 +130,19 @@ export default function Applications() {
                         }
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                        <a href="#" className="text-blue-600 hover:text-blue-900">
+                        <button
+                          className="bg-blue-700 text-white active:bg-blue-600 text-md px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                          type="button"
+                          onClick={() => expandBusiness(business.id)}
+                        >
                           Expand
-                        </a>
+                        </button>
+                        {showModal 
+                          ? <Modal 
+                              closeBusiness={closeBusiness} 
+                              businessData={businessData}
+                            /> 
+                          : null}
                       </td>
                     </tr>
                   ))}
