@@ -6,6 +6,18 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-family: FoundersGrotesk;
+}
+
+.containerpages {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  font-family: FoundersGrotesk;
 }
 
 .main {
@@ -16,6 +28,18 @@
   justify-content: center;
   align-items: center;
 }
+
+.form {
+  padding: 2rem;
+  background: #FFFFFF;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
 
 .footer {
   width: 100%;
@@ -56,8 +80,8 @@
 }
 
 .description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+  line-height: 2;
+  font-size: 1.25rem;
 }
 
 .code {

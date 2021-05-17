@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
+
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -13,26 +15,30 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          <a href="https://middesk.com">Middesk</a> Example Implementation
         </h1>
 
-        <p className={styles.description}>
+        {/* <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
-        </p>
+        </p> */}
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <Link href="/form">
+            <a className={styles.card}>
+              <h2>Start Application &rarr;</h2>
+              <p>Start your business bank account application process</p>
+            </a>
+          </Link>
+          
+          <Link href="/applications">
+            <a className={styles.card}>
+              <h2>Application Status &rarr;</h2>
+              <p>Check the statuses of your business bank account applications</p>
+            </a>
+          </Link>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
+          {/* <a
             href="https://github.com/vercel/next.js/tree/master/examples"
             className={styles.card}
           >
@@ -48,20 +54,16 @@ export default function Home() {
             <p>
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
-          </a>
+          </a> */}
         </div>
       </main>
-
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://middesk.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          Powered by &nbsp;<strong>Middesk</strong>
         </a>
       </footer>
     </div>
