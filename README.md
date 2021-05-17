@@ -10,7 +10,9 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Make sure you run [Ngrok](https://ngrok.com/) to be able to open up your local webhook endpoint to outside https requests. 
+Make sure you run [Ngrok](https://ngrok.com/) to be able to open up your local webhook endpoint to outside https requests.
+
+To see this applicatoin live, visit https://middesk.vercel.app/.
 
 ## Resources Used
 
