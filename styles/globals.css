@@ -19,7 +19,7 @@ a {
 
 @font-face {
   font-family: 'FoundersGrotesk';
-  src: url('/fonts/FoundersGrotesk.otf');
+  src: url('../public/fonts/FoundersGrotesk.otf');
   font-weight: normal;
   font-style: normal;
 }
