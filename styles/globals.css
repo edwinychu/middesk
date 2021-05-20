@@ -19,7 +19,7 @@ a {
 
 @font-face {
   font-family: 'Vaud';
-  src: url('../public/fonts/FoundersGrotesk.otf');
+  src: url('/fonts/FoundersGrotesk.otf');
   font-weight: normal;
   font-style: normal;
 }
